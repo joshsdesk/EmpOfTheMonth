@@ -1,26 +1,34 @@
--- Seed Data for Employee Tracker
+-- seeds.sql
 
--- Insert initial data into 'department' table
-INSERT INTO department (name) VALUES
-('Sales'),
-('Engineering'),
-('Finance'),
-('Human Resources');
+-- Insert initial departments
+INSERT INTO department (name) 
+VALUES 
+('Engineering'), 
+('Sales'), 
+('HR'), 
+('Operations'),
+('Marketing'), 
+('Finance');
 
--- Insert initial data into 'role' table
-INSERT INTO role (title, salary, department_id) VALUES
-('Sales Manager', 75000, 1),
-('Salesperson', 50000, 1),
-('Software Engineer', 90000, 2),
-('Lead Engineer', 120000, 2),
-('Accountant', 65000, 3),
-('HR Specialist', 55000, 4);
+-- Insert initial roles with details
+INSERT INTO role (title, salary, department_id)
+VALUES 
+('Software Engineer', 127000, 1),
+('Sales Manager', 82000, 2),
+('HR Specialist', 60000, 3),
+('Production Manager', 92000, 4),
+('Marketing Coordinator', 55000, 5),
+('Financial Analyst', 75000, 6);
 
--- Insert initial data into 'employee' table
-INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES
-('John', 'Doe', 1, NULL), -- Manager with no manager
-('Jane', 'Smith', 2, 1),
-('Alice', 'Johnson', 3, NULL),
-('Bob', 'Brown', 4, 3),
-('Charlie', 'Davis', 5, NULL),
-('Dana', 'White', 6, NULL);
+-- Insert initial employees
+INSERT INTO employee (first_name, last_name, role_id, manager_id) 
+VALUES 
+('John', 'Doe', 1, null), 
+('Jane', 'Smith', 2, null), 
+('Jim', 'Brown', 3, null), 
+('Alice', 'Johnson', 1, 1), 
+('Bob', 'Williams', 2, 2), 
+('Carol', 'Davis', 3, 3), 
+('David', 'Miller', 4, null), 
+('Hailey', 'Hawking', 5, null), 
+('Eve', 'Wilson', 6, null);

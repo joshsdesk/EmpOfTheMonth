@@ -1,72 +1,101 @@
+# Employee Tracker
 
-  ## Title
-        employMee
- 
-          
+## Description
+
+The **Employee Tracker** is a command-line application that allows business owners to view and manage company departments, roles, and employees. This content management system (CMS) helps organize and plan business operations efficiently by using **Node.js, Inquirer, and PostgreSQL**.
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Demo](#demo)
+- [Technologies Used](#technologies-used)
+- [Database Schema](#database-schema)
+- [License](#license)
+
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone <repository-url>
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd employee-tracker
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Install Inquirer package version 8.2.4:
+   ```sh
+   npm i inquirer@8.2.4
+   ```
+5. Set up the PostgreSQL database by running the provided schema and seeds files.
+6. Update database credentials in the `.env` file (if applicable).
+
+## Usage
+
+1. Start the application:
+   ```sh
+   node index.js
+   ```
+2. Select options from the command-line menu to view and manage employees, roles, and departments.
+3. Follow the prompts to add, update, or delete records in the database.
+
+## Features
+
+- View all departments, roles, and employees
+- Add new departments, roles, and employees
+- Update employee roles
+- User-friendly command-line interface
+
+### Bonus Features:
+- Update employee managers
+- View employees by manager
+- View employees by department
+- Delete departments, roles, and employees
+- View total budget utilization by department
+
+## Demo
+
+Watch the application in action:
+[![Demo Video](./Assets/12-sql-homework-video-thumbnail.png)](https://2u-20.wistia.com/medias/2lnle7xnpk)
+
+## Technologies Used
+
+- **Node.js**
+- **Inquirer.js** (8.2.4)
+- **PostgreSQL**
+- **pg package**
+
+## Database Schema
+
+The application follows the schema below:
+
+- **Department Table**
+  - `id`: SERIAL PRIMARY KEY
+  - `name`: VARCHAR(30) UNIQUE NOT NULL
+
+- **Role Table**
+  - `id`: SERIAL PRIMARY KEY
+  - `title`: VARCHAR(30) UNIQUE NOT NULL
+  - `salary`: DECIMAL NOT NULL
+  - `department_id`: INTEGER NOT NULL (foreign key to Department)
+
+- **Employee Table**
+  - `id`: SERIAL PRIMARY KEY
+  - `first_name`: VARCHAR(30) NOT NULL
+  - `last_name`: VARCHAR(30) NOT NULL
+  - `role_id`: INTEGER NOT NULL (foreign key to Role)
+  - `manager_id`: INTEGER (foreign key to Employee, nullable)
+
 ## License
-![Static Badge](https://img.shields.io/badge/License-%20MIT%20License-red)
 
-   
-  ## Table of Contents
+This project is licensed under the MIT License.
 
-[Description of the app](#description)
+## Questions
+Github: https://github.com/joshsdesk/EmpOfTheMonth
 
+For additional questions, contact JoshsDesk@gmail.com
 
-[Installation of the app](#installation)
-
-
-[Usage of app](#usage)
-
-
-[License Badge](#license)
-
-
-[test](#test)
-
-
-[Contact information](#contact)
-
-         
-[video submission Link](#video-submission)
-
-    
- ## Description
-        this is a query driven application that allows you to add employees, roles, and departments to a database and view each in various different ways, you can view the employees by department and by manager and you can even delete departments! respectivley deleting all roles and employees tied to the department
-
-        
-          - I biult this project with the intetnion of becoming more adept in using sql and undersatanding how to connect different types of servers to an application
-
-          - this application allows you to keep track of all employees, departments, and roles
-
-          - I learned how to connect sql to an application and how to write query's in type script and have them be used in sql essentially allowing  interconectivity
-
-    
-  ## Installation
-
-          - if you would like to fork the project you may and clone the repo from there go to a terminal in the root of employMee then from there you ru the command "npm run start" if the application gives you prompts you did it right!
-           
-
-    
-  ## Usage
-
-          - if you are an employer you can use this application to keep track of all employees!
-
-
-
-     
-  ## Test
-          - in the terminal at the root of employMee run the command "npm run start" from there follow all prompts desired
-
-
-    
-  ## Contact
-
-          - payton212
-
-          - payton_212@icloud.com
-
-
-## video submission 
-
-
-[watch my video!](https://youtu.be/Oq6G7ZnaNhY?si=f71glhtaeLUYpRx-)

@@ -1,13 +1,12 @@
- \c department_db
-
--- epartment table
+\c empofthemonth
+-- Insert data into the department table
 INSERT INTO department ( name) VALUES
 ('Engineering'),
 ('Finance'),
 ('Human Resources'),
 ('Marketing');
 
--- role table
+-- Insert data into the role table
 INSERT INTO role (title, salary, department_id) VALUES
 ('Software Engineer', 90000, 1),
 ('Data Analyst', 75000, 1),
@@ -15,7 +14,7 @@ INSERT INTO role (title, salary, department_id) VALUES
 ('HR Specialist', 65000, 3),
 ('Marketing Manager', 80000, 4);
 
---  employee table
+-- Insert data into the employee table
 INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES
 ('John', 'Doe', 1, NULL),
 ('Jane', 'Smith', 2, 1),

@@ -1,4 +1,15 @@
 import { pool } from "./connection.js";
+import figlet from "figlet";
+const displayTitle = () => {
+    console.log("\n");
+    console.log(figlet.textSync("Employee Manager", {
+        font: "Big",
+        horizontalLayout: "default",
+        verticalLayout: "default"
+    }));
+    console.log("\n");
+};
+displayTitle(); // Show title when app starts
 export default class Db {
     constructor() {
         Object.defineProperty(this, "exit", {

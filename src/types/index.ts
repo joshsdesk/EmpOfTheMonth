@@ -3,7 +3,7 @@ import { pool } from '../db/connection.js';
 export default class Db {
     constructor() { }
     
-    async query(sql: string, args: any[] = []) {
+    async query(sql: string, args: Array<unknown> = []) {
         const client = await pool.connect();
         try {
             const result = await client.query(sql, args);

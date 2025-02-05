@@ -38,10 +38,24 @@ The **Employee Tracker** is a command-line application that allows business owne
 
 1. Start the application:
    ```sh
-   node index.js
+   npm start
    ```
-2. Select options from the command-line menu to view and manage employees, roles, and departments.
-3. Follow the prompts to add, update, or delete records in the database.
+2. Welcome Screen
+   The application will display an ASCII title (Employee Manager) using figlet.
+3. Main Menu (Inquirer.js)
+   You will see a command-line menu with the following options:
+   View all departments
+   View all roles
+   View all employees
+   Add a department
+   Add a role
+   Add an employee
+   Update an employee role
+   
+4. Follow the prompts
+   Select an option using arrow keys and press Enter.
+   Enter required details when prompted (e.g., employee name, role, department).
+
 
 ## Features
 
@@ -57,10 +71,11 @@ The **Employee Tracker** is a command-line application that allows business owne
 - Delete departments, roles, and employees
 - View total budget utilization by department
 
-## Demo
+# Demo
 
-Watch the application in action:
-[![Demo Video](./Assets/12-sql-homework-video-thumbnail.png)](https://2u-20.wistia.com/medias/2lnle7xnpk)
+## Click Image for Demo:
+
+[![Demo Video](./Assets/Screenshot%202025-02-04%20234201.png)](https://youtu.be/hmhcGkJW_dg)
 
 ## Technologies Used
 

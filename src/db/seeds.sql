@@ -1,5 +1,4 @@
- 
-\c department_db
+ \c department_db
 
 -- epartment table
 INSERT INTO department ( name) VALUES

@@ -3,7 +3,8 @@ import inquirer from "inquirer";
 import Db from "./db/index.js";
 const db = new Db();
 // originchoice base layout was taken from jay mascarenas on day 3 of sql 
-function originChoice() {    
+function originChoice() {
+    // THEN I am presented with the following options: view all departments, view all roles, view all employees, add a department, add a role, add an employee,and update an employee role
     inquirer
         .prompt([
         {

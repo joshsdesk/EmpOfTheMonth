@@ -5,7 +5,8 @@ import Db from "./db/index.js";
 const db = new Db();
 // originchoice base layout was taken from jay mascarenas on day 3 of sql 
 function originChoice(): void {
-    inquirer
+  // THEN I am presented with the following options: view all departments, view all roles, view all employees, add a department, add a role, add an employee,and update an employee role
+  inquirer
     .prompt([
       {
         type: "list",
@@ -113,7 +114,7 @@ function originChoice(): void {
           Quit();
       }
     });
-}
+}// viewAllEmployees function was taken from jay mascarenas on sql day 3
 function ViewAllEmployees() {
   db.findAllEmployees()
     .then((res) => {
@@ -122,9 +123,9 @@ function ViewAllEmployees() {
     })
     .then(() => originChoice());
 }
-
+// majority of the addEmployee function was taken from sql day 3 from teacher Jay mascarenas he gave full permission for us to implement his code!
 function AddEmployee() {
-  
+  // THEN I am prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database
   inquirer
     .prompt([
       {
@@ -209,7 +210,8 @@ function AddEmployee() {
       });
     });
 }
-function ViewRoles() {  
+function ViewRoles() {
+  // THEN I am presented with the job title, role id, the department that role belongs to, and the salary for that role
   db.findAllRoles()
     .then((response) => {
       const roles = response?.rows;
@@ -218,7 +220,8 @@ function ViewRoles() {
     .then(() => originChoice());
 }
 function AddRole() {
-   inquirer
+  // THEN I am prompted to enter the name, salary, and department for the  role and that role is added to the database
+  inquirer
     .prompt([
       {
         type: "input",
@@ -267,6 +270,7 @@ function AddRole() {
     });
 }
 function ViewDepartments() {
+  // THEN I am presented with a formatted table showing department names and department ids
   db.findAllDepartments()
     .then((res) => {
       const department = res?.rows;
@@ -275,6 +279,7 @@ function ViewDepartments() {
     .then(() => originChoice());
 }
 function AddDepartment() {
+  // THEN I am prompted to enter the name of the department and that department is added to the database
   inquirer
     .prompt([
       {
